@@ -2,11 +2,20 @@
 # To Do List Application
 
 def add_task():
-    pass
+    #get task from user 
+    task = input("Enter task: ")
+    #define task status
+    task_info = {"task": task, "completed": False,}
+    # add task to the list of tasks
+    tasks.append(task_info)
+    print("Task added to the list successfuly")
+    print(tasks)
+
+
 def mark_task_complete():
     pass
 def view_tasks():
-    pass
+    ...
 
     
 
