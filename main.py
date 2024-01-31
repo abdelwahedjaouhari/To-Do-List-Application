@@ -9,11 +9,22 @@ def add_task():
     # add task to the list of tasks
     tasks.append(task_info)
     print("Task added to the list successfuly")
-    print(tasks)
 
 
 def mark_task_complete():
-    pass
+    # get list of incomplete tasks 
+    incomplete_tasks = [task for task in tasks if task["completed"] == False]
+    
+    # show them to the user 
+    for i, task in enumerate(incomplete_tasks):
+        print(f'{i+1}- {task["task"]}')
+        print("-"*30)
+    # get the task from the user 
+    task_number = int(input("Choose the task to complete:"))
+    # mark the task as completed 
+    incomplete_tasks[task_number - 1]["completed"] = True
+    # print a message to the user 
+    print(tasks)
 def view_tasks():
     ...
 
