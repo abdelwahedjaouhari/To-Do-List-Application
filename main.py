@@ -1,6 +1,30 @@
 # Abdelwahed Jaouhari 
 # To Do List Application
+tasks = []
 
+def main():
+    message = """1 - Add tasks to a list
+    2 - Mark task as complete
+    3 - View tasks
+    4 - Quit """
+
+
+    while True:
+      print(message)
+      choice = input ("Enter your choice: ")
+
+      if choice == "1":
+         add_task()
+      elif choice == "2":
+         mark_task_complete()
+      elif choice == "3":
+         view_tasks()
+      elif choice == "4":
+         break
+      else:
+         print("Invalid choice, please enter a number between 1 and 4")
+
+         
 def add_task():
     #get task from user 
     task = input("Enter task: ")
@@ -33,8 +57,8 @@ def mark_task_complete():
 def view_tasks():
     # if there are no tasks, print a message and return
     if not tasks:
-        print("No tasks to view")
-        return
+         print("No tasks to view")
+         return
     
     for i, task in enumerate(tasks):
 
@@ -47,24 +71,4 @@ def view_tasks():
         print(f'{i+1}. {task["task"]} {status}')
         print("-"*30)
 
-message = """1 - Add tasks to a list
-2 - Mark task as complete
-3 - View tasks
-4 - Quit """
-
-tasks = []
-
-while True:
-    print(message)
-    choice = input ("Enter your choice: ")
-
-    if choice == "1":
-        add_task()
-    elif choice == "2":
-        mark_task_complete()
-    elif choice == "3":
-        view_tasks()
-    elif choice == "4":
-        break
-    else:
-        print("Invalid choice, please enter a number between 1 and 4")
+main()
