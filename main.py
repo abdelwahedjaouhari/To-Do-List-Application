@@ -1,5 +1,5 @@
 # Abdelwahed Jaouhari 
-# Task Manager
+# To Do List Application
 
 import json
 from datetime import datetime
